@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>function</title>
+    </head>
+    <body>
+
+
+
+
+ <!-- Load
+
+
+
+<progress id="user-progress" value="0" max="100"></progress>
+<div class="hiddenblock">
+ hi
+</div>
+
+<style media="screen">
+    .hiddenblock {
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+    function userProgress(time) {
+        var start = 0;
+        var time = Math.round(time*1000/100);
+        var progressElement = document.getElementById('user-progress');
+        var intervalid=setInterval(function() {
+            if(start>100){
+                clearInterval(intervalid);
+                userProgressCallback();
+            }
+         else {
+            progressElement.value = start;
+        }
+            start++;
+        },time);
+    }
+
+    function userProgressCallBack() {
+        document.querySelector('.hiddenblock').style.display="block";
+    }
+
+    userProgress(1);
+</script>
+-->
+
+
+<script type="text/javascript">
+
+</script>
+
+
+
+ <!-- Load -->
+        <ul class="tabs-links">
+           <li>
+               <span>Первый таб</span>
+            </li>
+            <li>
+               <span>Второй таб</span>
+            </li>
+            <li>
+               <span>Третий таб</span>
+            </li>
+            <li>
+               <span>четвертый таб</span>
+            </li>
+        </ul>
+        <ul class="tabs-content">
+            <li>
+               <span>Содержимое первого таба</span>
+            </li>
+            <li>
+               <span>Содержимое второго таба</span>
+            </li>
+            <li>
+               <span>Содержимое третьего таба</span>
+            </li>
+            <li>
+               <span>Содержимое четвертого таба</span>
+            </li>
+        </ul>
+
+
+        <script type="text/javascript">
+            var links = document.querySelectorAll('.tabs-links li'); //Задействовали все заголовки
+            var content = document.querySelectorAll('.tabs-content li'); // Задействовали все содержания
+        //I=0 позволяет переключится на 1 таб
+
+        //(links.length) - Благодаря этому получаем все ссылки (Задействовать обязательно)
+            for(var i=0; i <links.length; i++) {
+                (function(i) {
+                   var link = links[i];
+
+                   link.onclick = function() {
+                   for(var j=0; j <content.length; j++) {
+                   var opacity = window.getComputedStyle(content[j]).opacity;
+
+                   if(opacity == "1") {
+                    content[j].style.opacity = "0";
+                    }
+                  }
+        content[i].style.opacity = "1";
+        }
+    }) (i);
+}
+        </script>
+
+
+
+
+
+<section class="relative">
+
+</section>
+
+
+
+
+<!-- Animate
+<div class="square"></div>
+-->
+
+
+
+
+
+
+
+<svg height="150" width="500">
+   <defs>
+     <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+       <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+       <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+     </radialGradient>
+   </defs>
+   <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+</svg>
+
+<svg>
+  <rect width="100" height="50" x="0" y="0" rx="0" ry="0" />
+</svg>
+
+
+
+
+
+
+
+
+
+<div class="square"></div>
+
+
+
+
+<!-- Фильтры CSS -->
+
+<!-- -->
+
+
+
+
+<!-- Заполняющая анимация текста на CSS
+<h1 class="title">
+    International House of <br>Prayer
+</h1>
+
+-->
+
+
+
+
+
+
+<!-- Внутренний мир JS -->
+
+
+<script type="text/javascript">
+    var cat = {
+        length: 0.5,
+        weight: 5,
+        age:10,
+        color:'white';
+        tail: {
+            lenght:0.2;
+            color:black;
+        },
+        getVoice: function(){
+            return:'may';
+        },
+        eat: function() {
+
+        }
+    };
+
+    cat.length = 0.6;
+    console.log(cat.length);
+    console.log(cat.width);
+    console.log(cat.getVoice());
+    console.log(cat.toString);
+</script>
+
+
+<!-- -->
+
+
+<script type="text/javascript">
+    var a = 'test';
+    var b = 10.357;
+
+    console.log(a.lenght);
+    console.log(b.toFixed(1));
+
+    var c = 'test';
+    // Тип данных "string"
+    var d = new String();
+    console.log(d);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
